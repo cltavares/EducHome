@@ -61,6 +61,11 @@ public class SpeechRecognitionEngine : MonoBehaviour
             case "quarto":
                 SceneManager.LoadScene("quarto");
                 break;
+            /*    
+            default:
+                SceneManager.LoadScene("Menu");
+                break;
+            */        
         }
 
         Debug.Log("switch: " +word);
