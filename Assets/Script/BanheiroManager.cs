@@ -10,7 +10,7 @@ public class BanheiroManager : MonoBehaviour
     Vector2 saboneteinitialPos, toalhainitialPos, shampooinitialPos, chuveiroinitialPos;
     public AudioSource pesquisaItensBanheiro;
     public AudioClip[] corretoItensBanheiro;
-    public AudioClip inCorretoBanheiro;
+    public AudioClip[] inCorretoBanheiro;
     bool saboneteCorreto, toalhaCorreto, chuveiroCorreto, shampooCorreto = false;
 
     void Start(){
@@ -48,7 +48,7 @@ public class BanheiroManager : MonoBehaviour
             saboneteCorreto = true;
         }else{
             sabonete.transform.position = saboneteinitialPos;
-            pesquisaItensBanheiro.clip = inCorretoBanheiro;
+            pesquisaItensBanheiro.clip = inCorretoBanheiro[1];
             pesquisaItensBanheiro.Play();
         }
     } 
@@ -62,7 +62,7 @@ public class BanheiroManager : MonoBehaviour
             toalhaCorreto = true;
         }else{
             toalha.transform.position = toalhainitialPos;
-            pesquisaItensBanheiro.clip = inCorretoBanheiro;
+            pesquisaItensBanheiro.clip = inCorretoBanheiro[2];
             pesquisaItensBanheiro.Play();
         }
     }
@@ -76,7 +76,7 @@ public class BanheiroManager : MonoBehaviour
             chuveiroCorreto = true;
         }else{
             chuveiro.transform.position = chuveiroinitialPos;
-            pesquisaItensBanheiro.clip = inCorretoBanheiro;
+            pesquisaItensBanheiro.clip = inCorretoBanheiro[0];
             pesquisaItensBanheiro.Play();
         }
     } 
@@ -90,7 +90,7 @@ public class BanheiroManager : MonoBehaviour
             shampooCorreto = true;
         }else{
             shampoo.transform.position = shampooinitialPos;
-            pesquisaItensBanheiro.clip = inCorretoBanheiro;
+            pesquisaItensBanheiro.clip = inCorretoBanheiro[3];
             pesquisaItensBanheiro.Play();
         }
     } 

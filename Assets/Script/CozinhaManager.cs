@@ -50,13 +50,13 @@ public class CozinhaManager : MonoBehaviour
         float Distance = Vector3.Distance(liquidificador.transform.position, liquidificadorPreto.transform.position);
         if (Distance < 50){
             liquidificador.transform.position = liquidificadorPreto.transform.position;
-            //pesquisaItensCozinha.clip = corretoItensBanheiro[1];
-            //pesquisaItensCozinha.Play();
+            pesquisaItensCozinha.clip = corretoItensCozinha[3];
+            pesquisaItensCozinha.Play();
             liquidificadorCorreto = true;
         }else{
             liquidificador.transform.position = liquidificadorinitialPos;
-            //pesquisaItensCozinha.clip = inCorretoBanheiro;
-            //pesquisaItensCozinha.Play();
+            pesquisaItensCozinha.clip = inCorretoCozinha[3];
+            pesquisaItensCozinha.Play();
         }
     } 
 
@@ -64,13 +64,13 @@ public class CozinhaManager : MonoBehaviour
         float Distance = Vector3.Distance(pratos.transform.position, pratosPreto.transform.position);
         if (Distance < 50){
             pratos.transform.position = pratosPreto.transform.position;
-            //pesquisaItensCozinha.clip = corretoItensBanheiro[2];
-            //pesquisaItensCozinha.Play();
+            pesquisaItensCozinha.clip = corretoItensCozinha[0];
+            pesquisaItensCozinha.Play();
             pratosCorreto = true;
         }else{
             pratos.transform.position = pratosinitialPos;
-            //pesquisaItensCozinha.clip = inCorretoBanheiro;
-            //pesquisaItensCozinha.Play();
+            pesquisaItensCozinha.clip = inCorretoCozinha[0];
+            pesquisaItensCozinha.Play();
         }
     }
 
@@ -78,13 +78,13 @@ public class CozinhaManager : MonoBehaviour
         float Distance = Vector3.Distance(fogao.transform.position, fogaoPreto.transform.position);
         if (Distance < 50){
             fogao.transform.position = fogaoPreto.transform.position;
-            //pesquisaItensCozinha.clip = corretoItensBanheiro[0];
-            //pesquisaItensCozinha.Play();
+            pesquisaItensCozinha.clip = corretoItensCozinha[1];
+            pesquisaItensCozinha.Play();
             fogaoCorreto = true;
         }else{
             fogao.transform.position = fogaoinitialPos;
-            //pesquisaItensCozinha.clip = inCorretoBanheiro;
-            //pesquisaItensCozinha.Play();
+            pesquisaItensCozinha.clip = inCorretoCozinha[1];
+            pesquisaItensCozinha.Play();
         }
     } 
 
@@ -92,13 +92,13 @@ public class CozinhaManager : MonoBehaviour
         float Distance = Vector3.Distance(geladeira.transform.position, geladeiraPreto.transform.position);
         if (Distance < 50){
             geladeira.transform.position = geladeiraPreto.transform.position;
-            //pesquisaItensCozinha.clip = corretoItensBanheiro[3];
-            //pesquisaItensCozinha.Play();
+            pesquisaItensCozinha.clip = corretoItensCozinha[2];
+            pesquisaItensCozinha.Play();
             geladeiraCorreto = true;
         }else{
             geladeira.transform.position = geladeirainitialPos;
-            //pesquisaItensCozinha.clip = inCorretoBanheiro;
-            //pesquisaItensCozinha.Play();
+            pesquisaItensCozinha.clip = inCorretoCozinha[2];
+            pesquisaItensCozinha.Play();
         }
     } 
 
