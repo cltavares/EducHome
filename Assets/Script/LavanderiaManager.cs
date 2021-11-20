@@ -50,13 +50,13 @@ public class LavanderiaManager : MonoBehaviour
         float Distance = Vector3.Distance(maquinaLavar.transform.position, maquinaLavarPreto.transform.position);
         if (Distance < 50){
             maquinaLavar.transform.position = maquinaLavarPreto.transform.position;
-            //pesquisaItensLavanderia.clip = corretoItensBanheiro[1];
-            //pesquisaItensLavanderia.Play();
+            pesquisaItensLavanderia.clip = corretoItensLavanderia[1];
+            pesquisaItensLavanderia.Play();
             maquinaLavarCorreto = true;
         }else{
             maquinaLavar.transform.position = maquinaLavarinitialPos;
-            //pesquisaItensLavanderia.clip = inCorretoBanheiro;
-            //pesquisaItensLavanderia.Play();
+            pesquisaItensLavanderia.clip = inCorretoLavanderia[1];
+            pesquisaItensLavanderia.Play();
         }
     } 
 
@@ -64,13 +64,13 @@ public class LavanderiaManager : MonoBehaviour
         float Distance = Vector3.Distance(sabaoPo.transform.position, sabaoPoPreto.transform.position);
         if (Distance < 50){
             sabaoPo.transform.position = sabaoPoPreto.transform.position;
-            //pesquisaItensLavanderia.clip = corretoItensBanheiro[2];
-            //pesquisaItensLavanderia.Play();
+            pesquisaItensLavanderia.clip = corretoItensLavanderia[2];
+            pesquisaItensLavanderia.Play();
             sabaoPoCorreto = true;
         }else{
             sabaoPo.transform.position = sabaoPoinitialPos;
-            //pesquisaItensLavanderia.clip = inCorretoBanheiro;
-            //pesquisaItensLavanderia.Play();
+            pesquisaItensLavanderia.clip = inCorretoLavanderia[2];
+            pesquisaItensLavanderia.Play();
         }
     }
 
@@ -78,13 +78,13 @@ public class LavanderiaManager : MonoBehaviour
         float Distance = Vector3.Distance(balde.transform.position, baldePreto.transform.position);
         if (Distance < 50){
             balde.transform.position = baldePreto.transform.position;
-            //pesquisaItensLavanderia.clip = corretoItensBanheiro[0];
-            //pesquisaItensLavanderia.Play();
+            pesquisaItensLavanderia.clip = corretoItensLavanderia[0];
+            pesquisaItensLavanderia.Play();
             baldeCorreto = true;
         }else{
             balde.transform.position = baldeinitialPos;
-            //pesquisaItensLavanderia.clip = inCorretoBanheiro;
-            //pesquisaItensLavanderia.Play();
+            pesquisaItensLavanderia.clip = inCorretoLavanderia[0];
+            pesquisaItensLavanderia.Play();
         }
     } 
 
@@ -92,13 +92,13 @@ public class LavanderiaManager : MonoBehaviour
         float Distance = Vector3.Distance(varalRoupas.transform.position, varalRoupasPreto.transform.position);
         if (Distance < 50){
             varalRoupas.transform.position = varalRoupasPreto.transform.position;
-            //pesquisaItensLavanderia.clip = corretoItensBanheiro[3];
-            //pesquisaItensLavanderia.Play();
+            pesquisaItensLavanderia.clip = corretoItensLavanderia[3];
+            pesquisaItensLavanderia.Play();
             varalRoupasCorreto = true;
         }else{
             varalRoupas.transform.position = varalRoupasinitialPos;
-            //pesquisaItensLavanderia.clip = inCorretoBanheiro;
-            //pesquisaItensLavanderia.Play();
+            pesquisaItensLavanderia.clip = inCorretoLavanderia[3];
+            pesquisaItensLavanderia.Play();
         }
     } 
 

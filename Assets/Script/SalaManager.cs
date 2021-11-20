@@ -47,13 +47,13 @@ public class SalaManager : MonoBehaviour
         float Distance = Vector3.Distance(televisao.transform.position, televisaoPreto.transform.position);
         if (Distance < 50){
             televisao.transform.position = televisaoPreto.transform.position;
-            //pesquisaItensSala.clip = corretoItensBanheiro[1];
-            //pesquisaItensSala.Play();
+            pesquisaItensSala.clip = corretoItensSala[0];
+            pesquisaItensSala.Play();
             televisaoCorreto = true;
         }else{
             televisao.transform.position = televisaoinitialPos;
-            //pesquisaItensSala.clip = inCorretoBanheiro;
-            //pesquisaItensSala.Play();
+            pesquisaItensSala.clip = inCorretoSala[0];
+            pesquisaItensSala.Play();
         }
     } 
 
@@ -61,13 +61,13 @@ public class SalaManager : MonoBehaviour
         float Distance = Vector3.Distance(sofa.transform.position, sofaPreto.transform.position);
         if (Distance < 50){
             sofa.transform.position = sofaPreto.transform.position;
-            //pesquisaItensSala.clip = corretoItensBanheiro[2];
-            //pesquisaItensSala.Play();
+            pesquisaItensSala.clip = corretoItensSala[1];
+            pesquisaItensSala.Play();
             sofaCorreto = true;
         }else{
             sofa.transform.position = sofainitialPos;
-            //pesquisaItensSala.clip = inCorretoBanheiro;
-            //pesquisaItensSala.Play();
+            pesquisaItensSala.clip = inCorretoSala[1];
+            pesquisaItensSala.Play();
         }
     }
 
@@ -75,13 +75,13 @@ public class SalaManager : MonoBehaviour
         float Distance = Vector3.Distance(vasoPlantas.transform.position, vasoPlantasPreto.transform.position);
         if (Distance < 50){
             vasoPlantas.transform.position = vasoPlantasPreto.transform.position;
-            //pesquisaItensSala.clip = corretoItensBanheiro[0];
-            //pesquisaItensSala.Play();
+            pesquisaItensSala.clip = corretoItensSala[2];
+            pesquisaItensSala.Play();
             vasoPlantasCorreto = true;
         }else{
             vasoPlantas.transform.position = vasoPlantasinitialPos;
-            //pesquisaItensSala.clip = inCorretoBanheiro;
-            //pesquisaItensSala.Play();
+            pesquisaItensSala.clip = inCorretoSala[2];
+            pesquisaItensSala.Play();
         }
     } 
 
@@ -89,13 +89,13 @@ public class SalaManager : MonoBehaviour
         float Distance = Vector3.Distance(mesa.transform.position, mesaPreto.transform.position);
         if (Distance < 50){
             mesa.transform.position = mesaPreto.transform.position;
-            //pesquisaItensSala.clip = corretoItensBanheiro[3];
-            //pesquisaItensSala.Play();
+            pesquisaItensSala.clip = corretoItensSala[3];
+            pesquisaItensSala.Play();
             mesaCorreto = true;
         }else{
             mesa.transform.position = mesainitialPos;
-            //pesquisaItensSala.clip = inCorretoBanheiro;
-            //pesquisaItensSala.Play();
+            pesquisaItensSala.clip = inCorretoSala[3];
+            pesquisaItensSala.Play();
         }
     } 
 

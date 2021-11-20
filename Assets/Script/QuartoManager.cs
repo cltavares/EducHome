@@ -9,8 +9,8 @@ public class QuartoManager : MonoBehaviour
     
     public AudioSource pesquisaItensQuarto;
     Vector2 camainitialPos, guardaRoupasinitialPos, travisseiroinitialPos, cobertorinitialPos;
-    public AudioClip[] corretoItensLavanderia;
-    public AudioClip[] inCorretoLavanderia;
+    public AudioClip[] corretoItensQuarto;
+    public AudioClip[] inCorretoQuarto;
     bool travisseiroCorreto, cobertorCorreto, camaCorreto, guardaRoupasCorreto = false;
 
 
@@ -47,13 +47,13 @@ public class QuartoManager : MonoBehaviour
         float Distance = Vector3.Distance(cama.transform.position, camaPreto.transform.position);
         if (Distance < 50){
             cama.transform.position = camaPreto.transform.position;
-            //pesquisaItensQuarto.clip = corretoItensBanheiro[1];
-            //pesquisaItensQuarto.Play();
+            pesquisaItensQuarto.clip = corretoItensQuarto[1];
+            pesquisaItensQuarto.Play();
             camaCorreto = true;
         }else{
             cama.transform.position = camainitialPos;
-            //pesquisaItensQuarto.clip = inCorretoBanheiro;
-            //pesquisaItensQuarto.Play();
+            pesquisaItensQuarto.clip = inCorretoQuarto[1];
+            pesquisaItensQuarto.Play();
         }
     } 
 
@@ -61,13 +61,13 @@ public class QuartoManager : MonoBehaviour
         float Distance = Vector3.Distance(guardaRoupas.transform.position, guardaRoupasPreto.transform.position);
         if (Distance < 50){
             guardaRoupas.transform.position = guardaRoupasPreto.transform.position;
-            //pesquisaItensQuarto.clip = corretoItensBanheiro[2];
-            //pesquisaItensQuarto.Play();
+            pesquisaItensQuarto.clip = corretoItensQuarto[2];
+            pesquisaItensQuarto.Play();
             guardaRoupasCorreto = true;
         }else{
             guardaRoupas.transform.position = guardaRoupasinitialPos;
-            //pesquisaItensQuarto.clip = inCorretoBanheiro;
-            //pesquisaItensQuarto.Play();
+            pesquisaItensQuarto.clip = inCorretoQuarto[2];
+            pesquisaItensQuarto.Play();
         }
     }
 
@@ -75,13 +75,13 @@ public class QuartoManager : MonoBehaviour
         float Distance = Vector3.Distance(travisseiro.transform.position, travisseiroPreto.transform.position);
         if (Distance < 50){
             travisseiro.transform.position = travisseiroPreto.transform.position;
-            //pesquisaItensQuarto.clip = corretoItensBanheiro[0];
-            //pesquisaItensQuarto.Play();
+            pesquisaItensQuarto.clip = corretoItensQuarto[0];
+            pesquisaItensQuarto.Play();
             travisseiroCorreto = true;
         }else{
             travisseiro.transform.position = travisseiroinitialPos;
-            //pesquisaItensQuarto.clip = inCorretoBanheiro;
-            //pesquisaItensQuarto.Play();
+            pesquisaItensQuarto.clip = inCorretoQuarto[0];
+            pesquisaItensQuarto.Play();
         }
     } 
 
@@ -89,13 +89,13 @@ public class QuartoManager : MonoBehaviour
         float Distance = Vector3.Distance(cobertor.transform.position, cobertorPreto.transform.position);
         if (Distance < 50){
             cobertor.transform.position = cobertorPreto.transform.position;
-            //pesquisaItensQuarto.clip = corretoItensBanheiro[3];
-            //pesquisaItensQuarto.Play();
+            pesquisaItensQuarto.clip = corretoItensQuarto[3];
+            pesquisaItensQuarto.Play();
             cobertorCorreto = true;
         }else{
             cobertor.transform.position = cobertorinitialPos;
-            //pesquisaItensQuarto.clip = inCorretoBanheiro;
-            //pesquisaItensQuarto.Play();
+            pesquisaItensQuarto.clip = inCorretoQuarto[3];
+            pesquisaItensQuarto.Play();
         }
     } 
 
