@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SalaManager : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class SalaManager : MonoBehaviour
     public AudioClip[] corretoItensSala;
     public AudioClip[] inCorretoSala;
     bool vasoPlantasCorreto, mesaCorreto, televisaoCorreto, sofaCorreto = false;
+    float timer = 0.0f;
+    int seconds = 0;
 
 
     void Start(){
@@ -104,5 +107,15 @@ public class SalaManager : MonoBehaviour
 
 
     void Update(){
+        
+        if(vasoPlantasCorreto && mesaCorreto && televisaoCorreto && sofaCorreto ){
+
+            timer += Time.deltaTime;
+            seconds = (int)(timer % 60);
+
+            if (seconds == 5){
+                SceneManager.LoadScene("Parabens");
+            }
+        }
     } 
 }

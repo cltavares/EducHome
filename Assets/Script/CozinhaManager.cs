@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CozinhaManager : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class CozinhaManager : MonoBehaviour
     public AudioClip[] corretoItensCozinha;
     public AudioClip[] inCorretoCozinha;
     bool fogaoCorreto, geladeiraCorreto, liquidificadorCorreto, pratosCorreto = false;
+    float timer = 0.0f;
+    int seconds = 0;
 
 
     void Start(){
@@ -107,6 +110,17 @@ public class CozinhaManager : MonoBehaviour
 
 
     void Update(){
+
+        if(fogaoCorreto && geladeiraCorreto && liquidificadorCorreto && pratosCorreto){
+
+            timer += Time.deltaTime;
+            seconds = (int)(timer % 60);
+
+            if (seconds == 5){
+                Debug.Log("itens do banheiro");
+                SceneManager.LoadScene("Parabens");
+            }
+        }
     }  
 
 }

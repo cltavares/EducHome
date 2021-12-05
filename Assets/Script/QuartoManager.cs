@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class QuartoManager : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class QuartoManager : MonoBehaviour
     public AudioClip[] corretoItensQuarto;
     public AudioClip[] inCorretoQuarto;
     bool travisseiroCorreto, cobertorCorreto, camaCorreto, guardaRoupasCorreto = false;
+    float timer = 0.0f;
+    int seconds = 0;
 
 
     void Start(){
@@ -104,5 +107,15 @@ public class QuartoManager : MonoBehaviour
 
 
     void Update(){
+
+        if(travisseiroCorreto && cobertorCorreto && camaCorreto && guardaRoupasCorreto ){
+
+            timer += Time.deltaTime;
+            seconds = (int)(timer % 60);
+
+            if (seconds == 5){
+                SceneManager.LoadScene("Parabens");
+            }
+        }
     } 
 }

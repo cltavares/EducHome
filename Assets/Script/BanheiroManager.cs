@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BanheiroManager : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class BanheiroManager : MonoBehaviour
     public AudioClip[] corretoItensBanheiro;
     public AudioClip[] inCorretoBanheiro;
     bool saboneteCorreto, toalhaCorreto, chuveiroCorreto, shampooCorreto = false;
+    float timer = 0.0f;
+    int seconds = 0;
 
     void Start(){
         pesquisaItensBanheiro = gameObject.GetComponent<AudioSource>();
@@ -96,8 +99,15 @@ public class BanheiroManager : MonoBehaviour
     } 
 
     void Update(){
-        if(toalhaCorreto && chuveiroCorreto && saboneteCorreto){
-            Debug.Log("itens do banheiro");
+        if(toalhaCorreto && chuveiroCorreto && saboneteCorreto && shampooCorreto){
+
+            timer += Time.deltaTime;
+            seconds = (int)(timer % 60);
+
+            if (seconds == 5){
+                Debug.Log("itens do banheiro");
+                SceneManager.LoadScene("Parabens");
+            }
         }
     }  
 
