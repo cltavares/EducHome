@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SalaManager : MonoBehaviour
 {
@@ -15,9 +16,13 @@ public class SalaManager : MonoBehaviour
     bool vasoPlantasCorreto, mesaCorreto, televisaoCorreto, sofaCorreto = false;
     float timer = 0.0f;
     int seconds = 0;
+    [SerializeField]
+    public Text contadorItensSalaText;
+    private int contadorItensSala;
 
 
     void Start(){
+        contadorItensSala = 0;
         pesquisaItensSala = gameObject.GetComponent<AudioSource>();
 
 
@@ -52,6 +57,7 @@ public class SalaManager : MonoBehaviour
             televisao.transform.position = televisaoPreto.transform.position;
             pesquisaItensSala.clip = corretoItensSala[0];
             pesquisaItensSala.Play();
+            contadorItensSala += 1;
             televisaoCorreto = true;
         }else{
             televisao.transform.position = televisaoinitialPos;
@@ -66,6 +72,7 @@ public class SalaManager : MonoBehaviour
             sofa.transform.position = sofaPreto.transform.position;
             pesquisaItensSala.clip = corretoItensSala[1];
             pesquisaItensSala.Play();
+            contadorItensSala += 1;
             sofaCorreto = true;
         }else{
             sofa.transform.position = sofainitialPos;
@@ -80,6 +87,7 @@ public class SalaManager : MonoBehaviour
             vasoPlantas.transform.position = vasoPlantasPreto.transform.position;
             pesquisaItensSala.clip = corretoItensSala[2];
             pesquisaItensSala.Play();
+            contadorItensSala += 1;
             vasoPlantasCorreto = true;
         }else{
             vasoPlantas.transform.position = vasoPlantasinitialPos;
@@ -94,6 +102,7 @@ public class SalaManager : MonoBehaviour
             mesa.transform.position = mesaPreto.transform.position;
             pesquisaItensSala.clip = corretoItensSala[3];
             pesquisaItensSala.Play();
+            contadorItensSala += 1;
             mesaCorreto = true;
         }else{
             mesa.transform.position = mesainitialPos;
@@ -107,6 +116,9 @@ public class SalaManager : MonoBehaviour
 
 
     void Update(){
+
+        contadorItensSalaText.text = "Itens:"+ contadorItensSala.ToString();
+        Debug.Log(contadorItensSala);
         
         if(vasoPlantasCorreto && mesaCorreto && televisaoCorreto && sofaCorreto ){
 

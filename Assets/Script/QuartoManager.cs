@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class QuartoManager : MonoBehaviour
 {
@@ -15,9 +16,13 @@ public class QuartoManager : MonoBehaviour
     bool travisseiroCorreto, cobertorCorreto, camaCorreto, guardaRoupasCorreto = false;
     float timer = 0.0f;
     int seconds = 0;
+    [SerializeField]
+    public Text contadorItensQuartoText;
+    private int contadorItensQuarto;
 
 
     void Start(){
+        contadorItensQuarto = 0;
         pesquisaItensQuarto = gameObject.GetComponent<AudioSource>();
 
 
@@ -52,6 +57,7 @@ public class QuartoManager : MonoBehaviour
             cama.transform.position = camaPreto.transform.position;
             pesquisaItensQuarto.clip = corretoItensQuarto[1];
             pesquisaItensQuarto.Play();
+            contadorItensQuarto += 1;
             camaCorreto = true;
         }else{
             cama.transform.position = camainitialPos;
@@ -66,6 +72,7 @@ public class QuartoManager : MonoBehaviour
             guardaRoupas.transform.position = guardaRoupasPreto.transform.position;
             pesquisaItensQuarto.clip = corretoItensQuarto[2];
             pesquisaItensQuarto.Play();
+            contadorItensQuarto += 1;
             guardaRoupasCorreto = true;
         }else{
             guardaRoupas.transform.position = guardaRoupasinitialPos;
@@ -80,6 +87,7 @@ public class QuartoManager : MonoBehaviour
             travisseiro.transform.position = travisseiroPreto.transform.position;
             pesquisaItensQuarto.clip = corretoItensQuarto[0];
             pesquisaItensQuarto.Play();
+            contadorItensQuarto += 1;
             travisseiroCorreto = true;
         }else{
             travisseiro.transform.position = travisseiroinitialPos;
@@ -94,6 +102,7 @@ public class QuartoManager : MonoBehaviour
             cobertor.transform.position = cobertorPreto.transform.position;
             pesquisaItensQuarto.clip = corretoItensQuarto[3];
             pesquisaItensQuarto.Play();
+            contadorItensQuarto += 1;
             cobertorCorreto = true;
         }else{
             cobertor.transform.position = cobertorinitialPos;
@@ -107,6 +116,8 @@ public class QuartoManager : MonoBehaviour
 
 
     void Update(){
+        contadorItensQuartoText.text = "Itens: "+ contadorItensQuarto.ToString();
+        Debug.Log(contadorItensQuarto);
 
         if(travisseiroCorreto && cobertorCorreto && camaCorreto && guardaRoupasCorreto ){
 

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LavanderiaManager : MonoBehaviour
 {
@@ -18,9 +19,13 @@ public class LavanderiaManager : MonoBehaviour
     bool baldeCorreto, varalRoupasCorreto, maquinaLavarCorreto, sabaoPoCorreto = false;
     float timer = 0.0f;
     int seconds = 0;
+    [SerializeField]
+    public Text contadorItensLavanderiaText;
+    private int contadorItensLavanderia;
 
 
     void Start(){
+        contadorItensLavanderia = 0;
         pesquisaItensLavanderia = gameObject.GetComponent<AudioSource>();
 
 
@@ -55,6 +60,7 @@ public class LavanderiaManager : MonoBehaviour
             maquinaLavar.transform.position = maquinaLavarPreto.transform.position;
             pesquisaItensLavanderia.clip = corretoItensLavanderia[1];
             pesquisaItensLavanderia.Play();
+            contadorItensLavanderia += 1;
             maquinaLavarCorreto = true;
         }else{
             maquinaLavar.transform.position = maquinaLavarinitialPos;
@@ -69,6 +75,7 @@ public class LavanderiaManager : MonoBehaviour
             sabaoPo.transform.position = sabaoPoPreto.transform.position;
             pesquisaItensLavanderia.clip = corretoItensLavanderia[2];
             pesquisaItensLavanderia.Play();
+            contadorItensLavanderia += 1;
             sabaoPoCorreto = true;
         }else{
             sabaoPo.transform.position = sabaoPoinitialPos;
@@ -83,6 +90,7 @@ public class LavanderiaManager : MonoBehaviour
             balde.transform.position = baldePreto.transform.position;
             pesquisaItensLavanderia.clip = corretoItensLavanderia[0];
             pesquisaItensLavanderia.Play();
+            contadorItensLavanderia += 1;
             baldeCorreto = true;
         }else{
             balde.transform.position = baldeinitialPos;
@@ -97,6 +105,7 @@ public class LavanderiaManager : MonoBehaviour
             varalRoupas.transform.position = varalRoupasPreto.transform.position;
             pesquisaItensLavanderia.clip = corretoItensLavanderia[3];
             pesquisaItensLavanderia.Play();
+            contadorItensLavanderia += 1;
             varalRoupasCorreto = true;
         }else{
             varalRoupas.transform.position = varalRoupasinitialPos;
@@ -110,6 +119,9 @@ public class LavanderiaManager : MonoBehaviour
 
 
     void Update(){
+
+        contadorItensLavanderiaText.text = "Itens:"+ contadorItensLavanderia.ToString();
+        Debug.Log(contadorItensLavanderia);
         
         if(baldeCorreto && varalRoupasCorreto && maquinaLavarCorreto && sabaoPoCorreto){
 

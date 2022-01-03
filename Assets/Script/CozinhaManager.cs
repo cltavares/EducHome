@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class CozinhaManager : MonoBehaviour
 {
@@ -18,9 +19,14 @@ public class CozinhaManager : MonoBehaviour
     bool fogaoCorreto, geladeiraCorreto, liquidificadorCorreto, pratosCorreto = false;
     float timer = 0.0f;
     int seconds = 0;
+    [SerializeField]
+    public Text contadorItensCozinhaText;
+    private int contadorItensCozinha;
+
 
 
     void Start(){
+        contadorItensCozinha = 0;
         pesquisaItensCozinha = gameObject.GetComponent<AudioSource>();
 
 
@@ -55,6 +61,7 @@ public class CozinhaManager : MonoBehaviour
             liquidificador.transform.position = liquidificadorPreto.transform.position;
             pesquisaItensCozinha.clip = corretoItensCozinha[3];
             pesquisaItensCozinha.Play();
+            contadorItensCozinha +=1;
             liquidificadorCorreto = true;
         }else{
             liquidificador.transform.position = liquidificadorinitialPos;
@@ -69,6 +76,7 @@ public class CozinhaManager : MonoBehaviour
             pratos.transform.position = pratosPreto.transform.position;
             pesquisaItensCozinha.clip = corretoItensCozinha[0];
             pesquisaItensCozinha.Play();
+            contadorItensCozinha +=1;
             pratosCorreto = true;
         }else{
             pratos.transform.position = pratosinitialPos;
@@ -83,6 +91,7 @@ public class CozinhaManager : MonoBehaviour
             fogao.transform.position = fogaoPreto.transform.position;
             pesquisaItensCozinha.clip = corretoItensCozinha[1];
             pesquisaItensCozinha.Play();
+            contadorItensCozinha +=1;
             fogaoCorreto = true;
         }else{
             fogao.transform.position = fogaoinitialPos;
@@ -97,6 +106,7 @@ public class CozinhaManager : MonoBehaviour
             geladeira.transform.position = geladeiraPreto.transform.position;
             pesquisaItensCozinha.clip = corretoItensCozinha[2];
             pesquisaItensCozinha.Play();
+            contadorItensCozinha +=1;
             geladeiraCorreto = true;
         }else{
             geladeira.transform.position = geladeirainitialPos;
@@ -110,6 +120,9 @@ public class CozinhaManager : MonoBehaviour
 
 
     void Update(){
+
+        contadorItensCozinhaText.text = "Itens:"+ contadorItensCozinha.ToString();
+        Debug.Log(contadorItensCozinha);
 
         if(fogaoCorreto && geladeiraCorreto && liquidificadorCorreto && pratosCorreto){
 

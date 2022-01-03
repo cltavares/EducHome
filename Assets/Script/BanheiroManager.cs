@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class BanheiroManager : MonoBehaviour
 {
@@ -15,8 +16,13 @@ public class BanheiroManager : MonoBehaviour
     bool saboneteCorreto, toalhaCorreto, chuveiroCorreto, shampooCorreto = false;
     float timer = 0.0f;
     int seconds = 0;
+    
+    [SerializeField]
+    public Text contadorItensBanheiroText;
+    private int contadorItensBanheiro;
 
     void Start(){
+        contadorItensBanheiro = 0;
         pesquisaItensBanheiro = gameObject.GetComponent<AudioSource>();
         
         //banheiro
@@ -48,6 +54,7 @@ public class BanheiroManager : MonoBehaviour
             sabonete.transform.position = sabonetePreto.transform.position;
             pesquisaItensBanheiro.clip = corretoItensBanheiro[1];//[Random.Range(0, corretoItensBanheiro.Length)];
             pesquisaItensBanheiro.Play();
+            contadorItensBanheiro += 1;
             saboneteCorreto = true;
         }else{
             sabonete.transform.position = saboneteinitialPos;
@@ -62,6 +69,7 @@ public class BanheiroManager : MonoBehaviour
             toalha.transform.position = toalhaPreto.transform.position;
             pesquisaItensBanheiro.clip = corretoItensBanheiro[2];//[Random.Range(0, corretoItensBanheiro.Length)];
             pesquisaItensBanheiro.Play();
+            contadorItensBanheiro += 1;
             toalhaCorreto = true;
         }else{
             toalha.transform.position = toalhainitialPos;
@@ -76,6 +84,7 @@ public class BanheiroManager : MonoBehaviour
             chuveiro.transform.position = chuveiroPreto.transform.position;
             pesquisaItensBanheiro.clip = corretoItensBanheiro[0];//[Random.Range(0, corretoItensBanheiro.Length)];
             pesquisaItensBanheiro.Play();
+            contadorItensBanheiro += 1;
             chuveiroCorreto = true;
         }else{
             chuveiro.transform.position = chuveiroinitialPos;
@@ -90,6 +99,7 @@ public class BanheiroManager : MonoBehaviour
             shampoo.transform.position = shampooPreto.transform.position;
             pesquisaItensBanheiro.clip = corretoItensBanheiro[3];//[Random.Range(0, corretoItensBanheiro.Length)];
             pesquisaItensBanheiro.Play();
+            contadorItensBanheiro += 1;
             shampooCorreto = true;
         }else{
             shampoo.transform.position = shampooinitialPos;
@@ -99,6 +109,10 @@ public class BanheiroManager : MonoBehaviour
     } 
 
     void Update(){
+
+        Debug.Log(contadorItensBanheiro);
+        
+        contadorItensBanheiroText.text = "Itens: "+ contadorItensBanheiro.ToString();
         if(toalhaCorreto && chuveiroCorreto && saboneteCorreto && shampooCorreto){
 
             timer += Time.deltaTime;
