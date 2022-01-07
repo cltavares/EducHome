@@ -48,6 +48,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/Comodos.unity:
     - Class: 1
@@ -101,6 +102,57 @@ ScriptsOnlyBuild:
     - Class: 224
       Script: {instanceID: 0}
     Assets/Scenes/Informacao.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1602}
+    - Class: 114
+      Script: {instanceID: 1944}
+    - Class: 114
+      Script: {instanceID: 2844}
+    - Class: 114
+      Script: {instanceID: 3026}
+    - Class: 114
+      Script: {instanceID: 3080}
+    - Class: 114
+      Script: {instanceID: 3278}
+    - Class: 114
+      Script: {instanceID: 3556}
+    - Class: 114
+      Script: {instanceID: 3682}
+    - Class: 114
+      Script: {instanceID: 5830}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/Instrucoes.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -245,6 +297,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
@@ -282,7 +338,11 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 20
       Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
     - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
@@ -294,6 +354,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 114
       Script: {instanceID: 1602}
+    - Class: 114
+      Script: {instanceID: 2386}
     - Class: 114
       Script: {instanceID: 2460}
     - Class: 114
@@ -311,6 +373,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 5830}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -333,7 +397,11 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 20
       Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
     - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
@@ -345,6 +413,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 114
       Script: {instanceID: 1602}
+    - Class: 114
+      Script: {instanceID: 2386}
     - Class: 114
       Script: {instanceID: 2844}
     - Class: 114
@@ -362,6 +432,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 5830}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -382,7 +454,11 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 20
       Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
     - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
@@ -394,6 +470,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 114
       Script: {instanceID: 1602}
+    - Class: 114
+      Script: {instanceID: 2386}
     - Class: 114
       Script: {instanceID: 2844}
     - Class: 114
@@ -411,6 +489,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 5950}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -431,7 +511,11 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 20
       Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
     - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
@@ -443,6 +527,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 114
       Script: {instanceID: 1602}
+    - Class: 114
+      Script: {instanceID: 2386}
     - Class: 114
       Script: {instanceID: 2844}
     - Class: 114
@@ -460,6 +546,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 5830}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -480,7 +568,11 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 20
       Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
     - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
@@ -492,6 +584,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 114
       Script: {instanceID: 1602}
+    - Class: 114
+      Script: {instanceID: 2386}
     - Class: 114
       Script: {instanceID: 2844}
     - Class: 114
@@ -509,6 +603,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 5830}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -711,7 +807,7 @@ ScriptsOnlyBuild:
     className: PlaymodeTestsController
   - hash:
       serializedVersion: 2
-      Hash: 1bc3d2df1d4c00bf6c4da688c1ccf672
+      Hash: 795310f348f85e47fe24f729aba74c31
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BanheiroManager
@@ -831,7 +927,7 @@ ScriptsOnlyBuild:
     className: PositionRendererSorter
   - hash:
       serializedVersion: 2
-      Hash: f72ca4ed0369ee3ca4b21b89c7b42fe3
+      Hash: 9325d7065b48da68560174b5ffbb0edc
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CozinhaManager
@@ -855,7 +951,7 @@ ScriptsOnlyBuild:
     className: GraphicRaycaster
   - hash:
       serializedVersion: 2
-      Hash: ae9e4cb7d995ed844be060b5b98d9bc6
+      Hash: aaa2d56204a3002febd82716c266d1e4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SalaManager
@@ -1293,7 +1389,7 @@ ScriptsOnlyBuild:
     className: HeartsHealthVisual
   - hash:
       serializedVersion: 2
-      Hash: 214b5230809963282abf47bacd72fb40
+      Hash: 22b8fb9cb926107f96812ad521bc3256
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: QuartoManager
@@ -1359,7 +1455,7 @@ ScriptsOnlyBuild:
     className: BufferManager
   - hash:
       serializedVersion: 2
-      Hash: ff48498dbdf4d8bbd90551964de374d9
+      Hash: b092a9df53d39c9b0ceebae8902fdac1
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: LavanderiaManager
@@ -1410,4 +1506,5 @@ ScriptsOnlyBuild:
   - Assets/Scenes/lavanderia.unity
   - Assets/Scenes/Parabens.unity
   - Assets/Scenes/Informacao.unity
+  - Assets/Scenes/Instrucoes.unity
   playerPath: C:/Users/prodeb/EducHome/EducHome.apk
