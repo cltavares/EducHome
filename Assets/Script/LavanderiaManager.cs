@@ -62,6 +62,7 @@ public class LavanderiaManager : MonoBehaviour
             pesquisaItensLavanderia.Play();
             contadorItensLavanderia += 1;
             maquinaLavarCorreto = true;
+            alterarImagem(maquinaLavar, maquinaLavarPreto);
         }else{
             maquinaLavar.transform.position = maquinaLavarinitialPos;
             pesquisaItensLavanderia.clip = inCorretoLavanderia[1];
@@ -77,6 +78,7 @@ public class LavanderiaManager : MonoBehaviour
             pesquisaItensLavanderia.Play();
             contadorItensLavanderia += 1;
             sabaoPoCorreto = true;
+            alterarImagem(sabaoPo, sabaoPoPreto);
         }else{
             sabaoPo.transform.position = sabaoPoinitialPos;
             pesquisaItensLavanderia.clip = inCorretoLavanderia[2];
@@ -92,6 +94,7 @@ public class LavanderiaManager : MonoBehaviour
             pesquisaItensLavanderia.Play();
             contadorItensLavanderia += 1;
             baldeCorreto = true;
+            alterarImagem(balde, baldePreto);
         }else{
             balde.transform.position = baldeinitialPos;
             pesquisaItensLavanderia.clip = inCorretoLavanderia[0];
@@ -107,6 +110,7 @@ public class LavanderiaManager : MonoBehaviour
             pesquisaItensLavanderia.Play();
             contadorItensLavanderia += 1;
             varalRoupasCorreto = true;
+            alterarImagem(varalRoupas, varalRoupasPreto);
         }else{
             varalRoupas.transform.position = varalRoupasinitialPos;
             pesquisaItensLavanderia.clip = inCorretoLavanderia[3];
@@ -114,13 +118,15 @@ public class LavanderiaManager : MonoBehaviour
         }
     } 
 
-    
-
-
+    private void alterarImagem(GameObject imagem, GameObject imagemPreto)
+    {
+        imagem.GetComponent<Image>().enabled = false;
+        imagemPreto.GetComponent<Image>().color = new Color(255,255,255);
+    }
 
     void Update(){
 
-        contadorItensLavanderiaText.text = "Itens:"+ contadorItensLavanderia.ToString();
+        contadorItensLavanderiaText.text = "Itens: "+ contadorItensLavanderia.ToString();
         Debug.Log(contadorItensLavanderia);
         
         if(baldeCorreto && varalRoupasCorreto && maquinaLavarCorreto && sabaoPoCorreto){

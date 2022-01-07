@@ -56,6 +56,7 @@ public class BanheiroManager : MonoBehaviour
             pesquisaItensBanheiro.Play();
             contadorItensBanheiro += 1;
             saboneteCorreto = true;
+            alterarImagem(sabonete, sabonetePreto);
         }else{
             sabonete.transform.position = saboneteinitialPos;
             pesquisaItensBanheiro.clip = inCorretoBanheiro[1];
@@ -71,6 +72,7 @@ public class BanheiroManager : MonoBehaviour
             pesquisaItensBanheiro.Play();
             contadorItensBanheiro += 1;
             toalhaCorreto = true;
+            alterarImagem(toalha, toalhaPreto);
         }else{
             toalha.transform.position = toalhainitialPos;
             pesquisaItensBanheiro.clip = inCorretoBanheiro[2];
@@ -86,6 +88,7 @@ public class BanheiroManager : MonoBehaviour
             pesquisaItensBanheiro.Play();
             contadorItensBanheiro += 1;
             chuveiroCorreto = true;
+            alterarImagem(chuveiro, chuveiroPreto);
         }else{
             chuveiro.transform.position = chuveiroinitialPos;
             pesquisaItensBanheiro.clip = inCorretoBanheiro[0];
@@ -101,12 +104,19 @@ public class BanheiroManager : MonoBehaviour
             pesquisaItensBanheiro.Play();
             contadorItensBanheiro += 1;
             shampooCorreto = true;
+            alterarImagem(shampoo, shampooPreto);
         }else{
             shampoo.transform.position = shampooinitialPos;
             pesquisaItensBanheiro.clip = inCorretoBanheiro[3];
             pesquisaItensBanheiro.Play();
         }
     } 
+
+    private void alterarImagem(GameObject imagem, GameObject imagemPreto)
+    {
+        imagem.GetComponent<Image>().enabled = false;
+        imagemPreto.GetComponent<Image>().color = new Color(255,255,255);
+    }
 
     void Update(){
 

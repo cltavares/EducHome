@@ -19,6 +19,9 @@ public class SalaManager : MonoBehaviour
     [SerializeField]
     public Text contadorItensSalaText;
     private int contadorItensSala;
+    
+
+
 
 
     void Start(){
@@ -51,6 +54,8 @@ public class SalaManager : MonoBehaviour
     }
 
 
+
+
     public void DropTelevisao(){
         float Distance = Vector3.Distance(televisao.transform.position, televisaoPreto.transform.position);
         if (Distance < 50){
@@ -59,6 +64,7 @@ public class SalaManager : MonoBehaviour
             pesquisaItensSala.Play();
             contadorItensSala += 1;
             televisaoCorreto = true;
+            alterarImagem(this.televisao, this.televisaoPreto);
         }else{
             televisao.transform.position = televisaoinitialPos;
             pesquisaItensSala.clip = inCorretoSala[0];
@@ -73,7 +79,8 @@ public class SalaManager : MonoBehaviour
             pesquisaItensSala.clip = corretoItensSala[1];
             pesquisaItensSala.Play();
             contadorItensSala += 1;
-            sofaCorreto = true;
+            sofaCorreto = true;            
+            alterarImagem(this.sofa, this.sofaPreto);
         }else{
             sofa.transform.position = sofainitialPos;
             pesquisaItensSala.clip = inCorretoSala[1];
@@ -89,6 +96,7 @@ public class SalaManager : MonoBehaviour
             pesquisaItensSala.Play();
             contadorItensSala += 1;
             vasoPlantasCorreto = true;
+            alterarImagem(this.vasoPlantas, this.vasoPlantasPreto);
         }else{
             vasoPlantas.transform.position = vasoPlantasinitialPos;
             pesquisaItensSala.clip = inCorretoSala[2];
@@ -104,6 +112,8 @@ public class SalaManager : MonoBehaviour
             pesquisaItensSala.Play();
             contadorItensSala += 1;
             mesaCorreto = true;
+            alterarImagem(this.mesa, this.mesaPreto);
+           
         }else{
             mesa.transform.position = mesainitialPos;
             pesquisaItensSala.clip = inCorretoSala[3];
@@ -111,13 +121,15 @@ public class SalaManager : MonoBehaviour
         }
     } 
 
-    
-
-
+    private void alterarImagem(GameObject imagem, GameObject imagemPreto)
+    {
+        imagem.GetComponent<Image>().enabled = false;
+        imagemPreto.GetComponent<Image>().color = new Color(255,255,255);
+    }
 
     void Update(){
 
-        contadorItensSalaText.text = "Itens:"+ contadorItensSala.ToString();
+        contadorItensSalaText.text = "Itens: "+ contadorItensSala.ToString();
         Debug.Log(contadorItensSala);
         
         if(vasoPlantasCorreto && mesaCorreto && televisaoCorreto && sofaCorreto ){
@@ -129,5 +141,7 @@ public class SalaManager : MonoBehaviour
                 SceneManager.LoadScene("Parabens");
             }
         }
-    } 
+    }
+
+
 }

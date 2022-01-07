@@ -59,6 +59,7 @@ public class QuartoManager : MonoBehaviour
             pesquisaItensQuarto.Play();
             contadorItensQuarto += 1;
             camaCorreto = true;
+            alterarImagem(cama, camaPreto);
         }else{
             cama.transform.position = camainitialPos;
             pesquisaItensQuarto.clip = inCorretoQuarto[1];
@@ -74,6 +75,7 @@ public class QuartoManager : MonoBehaviour
             pesquisaItensQuarto.Play();
             contadorItensQuarto += 1;
             guardaRoupasCorreto = true;
+            alterarImagem(guardaRoupas, guardaRoupasPreto);
         }else{
             guardaRoupas.transform.position = guardaRoupasinitialPos;
             pesquisaItensQuarto.clip = inCorretoQuarto[2];
@@ -89,6 +91,7 @@ public class QuartoManager : MonoBehaviour
             pesquisaItensQuarto.Play();
             contadorItensQuarto += 1;
             travisseiroCorreto = true;
+            alterarImagem(travisseiro, travisseiroPreto);
         }else{
             travisseiro.transform.position = travisseiroinitialPos;
             pesquisaItensQuarto.clip = inCorretoQuarto[0];
@@ -104,6 +107,7 @@ public class QuartoManager : MonoBehaviour
             pesquisaItensQuarto.Play();
             contadorItensQuarto += 1;
             cobertorCorreto = true;
+            alterarImagem(cobertor, cobertorPreto);
         }else{
             cobertor.transform.position = cobertorinitialPos;
             pesquisaItensQuarto.clip = inCorretoQuarto[3];
@@ -111,9 +115,11 @@ public class QuartoManager : MonoBehaviour
         }
     } 
 
-    
-
-
+    private void alterarImagem(GameObject imagem, GameObject imagemPreto)
+    {
+        imagem.GetComponent<Image>().enabled = false;
+        imagemPreto.GetComponent<Image>().color = new Color(255,255,255);
+    }
 
     void Update(){
         contadorItensQuartoText.text = "Itens: "+ contadorItensQuarto.ToString();

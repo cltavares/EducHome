@@ -63,6 +63,7 @@ public class CozinhaManager : MonoBehaviour
             pesquisaItensCozinha.Play();
             contadorItensCozinha +=1;
             liquidificadorCorreto = true;
+            alterarImagem(liquidificador, liquidificadorPreto);
         }else{
             liquidificador.transform.position = liquidificadorinitialPos;
             pesquisaItensCozinha.clip = inCorretoCozinha[3];
@@ -78,6 +79,7 @@ public class CozinhaManager : MonoBehaviour
             pesquisaItensCozinha.Play();
             contadorItensCozinha +=1;
             pratosCorreto = true;
+            alterarImagem(pratos, pratosPreto);
         }else{
             pratos.transform.position = pratosinitialPos;
             pesquisaItensCozinha.clip = inCorretoCozinha[0];
@@ -93,6 +95,7 @@ public class CozinhaManager : MonoBehaviour
             pesquisaItensCozinha.Play();
             contadorItensCozinha +=1;
             fogaoCorreto = true;
+            alterarImagem(fogao, fogaoPreto);
         }else{
             fogao.transform.position = fogaoinitialPos;
             pesquisaItensCozinha.clip = inCorretoCozinha[1];
@@ -108,6 +111,7 @@ public class CozinhaManager : MonoBehaviour
             pesquisaItensCozinha.Play();
             contadorItensCozinha +=1;
             geladeiraCorreto = true;
+            alterarImagem(geladeira, geladeiraPreto);
         }else{
             geladeira.transform.position = geladeirainitialPos;
             pesquisaItensCozinha.clip = inCorretoCozinha[2];
@@ -115,13 +119,15 @@ public class CozinhaManager : MonoBehaviour
         }
     } 
 
-    
-
-
+    private void alterarImagem(GameObject imagem, GameObject imagemPreto)
+    {
+        imagem.GetComponent<Image>().enabled = false;
+        imagemPreto.GetComponent<Image>().color = new Color(255,255,255);
+    }
 
     void Update(){
 
-        contadorItensCozinhaText.text = "Itens:"+ contadorItensCozinha.ToString();
+        contadorItensCozinhaText.text = "Itens: "+ contadorItensCozinha.ToString();
         Debug.Log(contadorItensCozinha);
 
         if(fogaoCorreto && geladeiraCorreto && liquidificadorCorreto && pratosCorreto){

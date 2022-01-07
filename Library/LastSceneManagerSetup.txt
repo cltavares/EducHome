@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/cozinha.unity
+- path: Assets/Scenes/sala.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
