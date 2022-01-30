@@ -128,7 +128,7 @@ public class BanheiroManager : MonoBehaviour
             timer += Time.deltaTime;
             seconds = (int)(timer % 60);
 
-            if (seconds == 5){
+            if (seconds == 3){
                 Debug.Log("itens do banheiro");
                 SceneManager.LoadScene("Parabens");
             }

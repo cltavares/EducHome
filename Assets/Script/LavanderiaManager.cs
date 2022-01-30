@@ -134,7 +134,7 @@ public class LavanderiaManager : MonoBehaviour
             timer += Time.deltaTime;
             seconds = (int)(timer % 60);
 
-            if (seconds == 5){
+            if (seconds == 3){
                 SceneManager.LoadScene("Parabens");
             }
         }
