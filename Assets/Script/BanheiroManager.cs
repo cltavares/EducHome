@@ -6,7 +6,8 @@ using UnityEngine.UI;
 
 public class BanheiroManager : MonoBehaviour
 {
-    public GameObject sabonete, toalha,  chuveiro, shampoo, sabonetePreto, toalhaPreto, chuveiroPreto, shampooPreto;
+    public GameObject sabonete, toalha,  chuveiro, shampoo, sabonetePreto, 
+    toalhaPreto, chuveiroPreto, shampooPreto;
     
     //banheiro
     Vector2 saboneteinitialPos, toalhainitialPos, shampooinitialPos, chuveiroinitialPos;
